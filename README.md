@@ -30,3 +30,14 @@ Todas as fotos/perspectivas foram baixadas da página oficial do empreendimento 
 | `penthouse.jpg` (planta) | <https://frincorporadora.com.br/wp-content/uploads/2023/07/Penthouse-1.jpg> |
 | `logo-vetor-frlina.svg` | fornecido pela 3ADS (vetor oficial da marca) |
 | `marca-fr.png` | fornecido pela 3ADS (marca oficial FR) |
+
+Fotos dos cards "Conforto nos detalhes" — galeria da LP oficial (<https://empreendimentos.frincorporadora.com.br/lina>), fotos reais do empreendimento concluído:
+
+| Arquivo local | URL de origem |
+|---|---|
+| `card-area-social.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/21.png> |
+| `card-acesso.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/22.png> |
+| `card-dormitorios.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/1.png> |
+| `card-ventilacao.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/24.png> |
+| `card-suite.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/27.png> |
+| `card-arquitetura.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/28.png> |

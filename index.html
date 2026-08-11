@@ -214,17 +214,25 @@
   }
   .conf-card{
     border:1px solid var(--border);border-radius:var(--radius);
-    padding:38px 32px;background:var(--bg);
+    background:var(--bg);overflow:hidden;
     transition:transform .35s var(--ease),box-shadow .35s var(--ease);
   }
   .conf-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px -24px rgba(15,15,15,.14)}
-  .conf-card svg{
-    width:30px;height:30px;stroke:var(--primary);fill:none;
-    stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
-    margin-bottom:20px;
+  .conf-media{position:relative}
+  .conf-media img{width:100%;height:200px;object-fit:cover}
+  .conf-ico{
+    position:absolute;left:28px;bottom:-27px;
+    width:54px;height:54px;border-radius:50%;background:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px -8px rgba(220,67,60,.55);
   }
-  .conf-card h3{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.35}
-  .conf-card p{font-size:14.5px;color:var(--t2);line-height:1.65}
+  .conf-ico svg{
+    width:24px;height:24px;stroke:#fff;fill:none;
+    stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
+  }
+  .conf-body{padding:46px 28px 34px}
+  .conf-body h3{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.35}
+  .conf-body p{font-size:14.5px;color:var(--t2);line-height:1.65}
 
   /* ---------- Lazer ---------- */
   .lazer{background:var(--surface)}
@@ -552,34 +560,64 @@
     <div class="conf-grid">
       <!-- COPY: itens -->
       <div class="conf-card reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg>
-        <h3>Área social integrada</h3>
-        <p>Cozinha, sala de estar e varanda gourmet conectadas.</p>
+        <div class="conf-media">
+          <img src="images/card-area-social.jpg" alt="Área social" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Área social integrada</h3>
+          <p>Cozinha, sala de estar e varanda gourmet conectadas.</p>
+        </div>
       </div>
       <div class="conf-card reveal" style="transition-delay:.06s">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16"/><path d="M2 21h20"/><circle cx="14.5" cy="12" r=".5"/></svg>
-        <h3>Acesso privativo</h3>
-        <p>Elevador social e hall exclusivo para cada unidade.</p>
+        <div class="conf-media">
+          <img src="images/card-acesso.jpg" alt="Acesso do Lina Praça do Sol" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16"/><path d="M2 21h20"/><circle cx="14.5" cy="12" r=".5"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Acesso privativo</h3>
+          <p>Elevador social e hall exclusivo para cada unidade.</p>
+        </div>
       </div>
       <div class="conf-card reveal" style="transition-delay:.12s">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-        <h3>Dormitórios mais confortáveis</h3>
-        <p>Persianas integradas e atenuação acústica e lumínica.</p>
+        <div class="conf-media">
+          <img src="images/card-dormitorios.jpg" alt="Fachada do Lina ao entardecer" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Dormitórios mais confortáveis</h3>
+          <p>Persianas integradas e atenuação acústica e lumínica.</p>
+        </div>
       </div>
       <div class="conf-card reveal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
-        <h3>Ventilação natural</h3>
-        <p>Presente em todos os banheiros.</p>
+        <div class="conf-media">
+          <img src="images/card-ventilacao.jpg" alt="Varandas com vegetação" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Ventilação natural</h3>
+          <p>Presente em todos os banheiros.</p>
+        </div>
       </div>
       <div class="conf-card reveal" style="transition-delay:.06s">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18"/><path d="M9.5 11v2"/><path d="M14.5 11v2"/></svg>
-        <h3>Suíte do casal com closet</h3>
-        <p>Mais espaço para organização e privacidade.</p>
+        <div class="conf-media">
+          <img src="images/card-suite.jpg" alt="Ambiente interno" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18"/><path d="M9.5 11v2"/><path d="M14.5 11v2"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Suíte do casal com closet</h3>
+          <p>Mais espaço para organização e privacidade.</p>
+        </div>
       </div>
       <div class="conf-card reveal" style="transition-delay:.12s">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m5 21 5.5-9.5"/><path d="m19 21-5.5-9.5"/><path d="M12 7v2"/></svg>
-        <h3>Arquitetura com referências modernistas</h3>
-        <p>Linhas e soluções que dão identidade ao projeto e aparecem também na organização dos ambientes.</p>
+        <div class="conf-media">
+          <img src="images/card-arquitetura.jpg" alt="Torre do Lina Praça do Sol" loading="lazy">
+          <span class="conf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m5 21 5.5-9.5"/><path d="m19 21-5.5-9.5"/><path d="M12 7v2"/></svg></span>
+        </div>
+        <div class="conf-body">
+          <h3>Arquitetura com referências modernistas</h3>
+          <p>Linhas e soluções que dão identidade ao projeto e aparecem também na organização dos ambientes.</p>
+        </div>
       </div>
     </div>
   </div>
