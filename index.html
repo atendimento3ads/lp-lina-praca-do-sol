@@ -282,13 +282,6 @@
   }
   .pronto .btn{margin-top:44px}
 
-  /* ---------- Realização FR ---------- */
-  .fr{background:var(--bg)}
-  .fr-top{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
-  .fr-top img{height:72px;width:auto}
-  .fr-top h2 em{font-style:italic;font-weight:200;color:var(--t1)}
-  .fr .lead{margin-top:18px}
-
   /* ---------- Form ---------- */
   .contato{background:var(--surface);padding-bottom:130px}
   .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
@@ -352,7 +345,11 @@
   .foot{
     display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
   }
-  .foot-logo img{width:min(380px,100%);height:auto}
+  .foot-logo .foot-kicker{
+    display:block;font-size:12px;font-weight:600;letter-spacing:.28em;
+    text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:24px;
+  }
+  .foot-logo img{width:min(220px,60%);height:auto}
   .foot-nums{display:flex;flex-direction:column;gap:26px}
   .foot-num{
     display:flex;align-items:center;gap:16px;
@@ -393,7 +390,7 @@
     .gal{grid-template-columns:1fr 1fr;grid-auto-rows:210px}
     .contato-copy{position:static}
     .foot{grid-template-columns:1fr;gap:56px}
-    .foot-logo img{width:min(300px,80%)}
+    .foot-logo img{width:min(180px,55%)}
   }
   @media (max-width:640px){
     section{padding:64px 0}
@@ -664,20 +661,6 @@
   </div>
 </section>
 
-<!-- ============ REALIZAÇÃO FR ============ -->
-<section class="fr">
-  <div class="wrap">
-    <div class="fr-top reveal">
-      <img src="images/marca-fr.png" alt="FR Incorporadora" style="filter:brightness(0)">
-      <div>
-        <!-- COPY -->
-        <h2><em>Realização</em> FR Incorporadora</h2>
-        <p class="lead">O Lina Praça do Sol é um empreendimento da <strong>FR Incorporadora</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CONTATO ============ -->
 <section class="contato" id="contato">
   <div class="wrap">
@@ -731,7 +714,8 @@
   <div class="wrap">
     <div class="foot">
       <div class="foot-logo reveal">
-        <img src="images/logo-vetor-frlina.svg" alt="FR Lina Praça do Sol">
+        <span class="foot-kicker">Uma realização</span>
+        <img src="images/marca-fr.png" alt="FR Incorporadora">
       </div>
       <!-- COPY: números FR -->
       <div class="foot-nums reveal">
