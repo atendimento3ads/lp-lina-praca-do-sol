@@ -36,8 +36,8 @@ Fotos dos cards "Conforto nos detalhes" — galeria da LP oficial (<https://empr
 | Arquivo local | URL de origem |
 |---|---|
 | `card-area-social.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/21.png> |
-| `card-acesso.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/22.png> |
-| `card-dormitorios.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/1.png> |
+| `card-acesso.jpg` | <https://frincorporadora.com.br/wp-content/uploads/2023/07/LOBBY.jpg> |
+| `card-dormitorios.jpg` | recorte da planta humanizada <https://files.greatpages.com.br/arquivos/paginas_editor/417815-42b32f4b6bee1aef895bc829d7dce042.png> |
 | `card-ventilacao.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/24.png> |
-| `card-suite.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/27.png> |
-| `card-arquitetura.jpg` | <https://pages.greatpages.com.br/empreendimentos.frincorporadora.com.br-lina/1784550371/imagens/28.png> |
+| `card-suite.jpg` | recorte da planta humanizada <https://files.greatpages.com.br/arquivos/paginas_editor/417815-8050049b03e88319bc67a17c3e463968.png> |
+| `card-arquitetura.jpg` | recorte de <https://frincorporadora.com.br/wp-content/uploads/2023/07/FR-LINA-FACHADA-TORRE-06_EM-ALTA-ENVIAR-1.jpg> |
