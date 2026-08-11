@@ -208,11 +208,23 @@
   }
   .plantas .btn{margin-top:52px}
 
-  /* ---------- Ambientes ---------- */
-  .amb-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:center}
-  .amb-photo img{width:100%;height:620px;object-fit:cover;border-radius:var(--radius)}
-  .amb-copy p{font-size:16px;color:var(--t2);line-height:1.8;margin-top:22px}
-  .amb-copy p strong{color:var(--t1)}
+  /* ---------- Conforto nos detalhes ---------- */
+  .conf-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;
+  }
+  .conf-card{
+    border:1px solid var(--border);border-radius:var(--radius);
+    padding:38px 32px;background:var(--bg);
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  }
+  .conf-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px -24px rgba(15,15,15,.14)}
+  .conf-card svg{
+    width:30px;height:30px;stroke:var(--primary);fill:none;
+    stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
+    margin-bottom:20px;
+  }
+  .conf-card h3{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.35}
+  .conf-card p{font-size:14.5px;color:var(--t2);line-height:1.65}
 
   /* ---------- Lazer ---------- */
   .lazer{background:var(--surface)}
@@ -232,12 +244,18 @@
   }
   .gal .tall{grid-row:span 2}
   .gal .wide{grid-column:span 2}
-  .lazer-note{
-    margin-top:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;
+  .lazer-items{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin:0 0 56px;
   }
-  .lazer-note p{font-size:16px;color:var(--t2);line-height:1.8}
-  .lazer-note p strong{color:var(--t1)}
-  .lazer-note .btn{justify-self:end}
+  .lz-item{border-top:1px solid var(--border);padding-top:24px}
+  .lz-item svg{
+    width:28px;height:28px;stroke:var(--primary);fill:none;
+    stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
+    margin-bottom:16px;
+  }
+  .lz-item h3{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.35}
+  .lz-item p{font-size:14px;color:var(--t2);line-height:1.6}
+  .lazer-cta{display:flex;justify-content:center;margin-top:56px}
 
   /* ---------- Pronto para morar ---------- */
   .pronto{
@@ -245,8 +263,12 @@
   }
   .pronto::before{
     content:"";position:absolute;inset:0;z-index:-1;
-    background:url("images/lobby.jpg") center/cover no-repeat;
-    opacity:.22;
+    background:url("images/fachada-lobby.jpg") center/cover no-repeat;
+    opacity:.28;
+  }
+  .pronto-sub{
+    margin-top:22px;font-size:clamp(19px,2.2vw,26px);font-weight:300;
+    color:#fff;line-height:1.4;
   }
   .pronto::after{
     content:"";position:absolute;inset:0;z-index:-1;
@@ -364,12 +386,11 @@
     .stat{border-left:none;border-top:1px solid var(--border-dark);padding:30px 26px}
     .stat:nth-child(-n+2){border-top:none}
     .stat:nth-child(2n){border-left:1px solid var(--border-dark)}
-    .emp-grid,.amb-grid,.contato-grid,.lazer-head,.lazer-note{grid-template-columns:1fr;gap:48px}
-    .emp-photo img,.amb-photo img{height:440px}
-    .amb-photo{order:-1}
+    .emp-grid,.contato-grid,.lazer-head{grid-template-columns:1fr;gap:48px}
+    .emp-photo img{height:440px}
+    .conf-grid,.lazer-items{grid-template-columns:1fr 1fr}
     .tip-grid,.plan-figs{grid-template-columns:1fr;max-width:520px}
     .gal{grid-template-columns:1fr 1fr;grid-auto-rows:210px}
-    .lazer-note .btn{justify-self:start}
     .contato-copy{position:static}
     .foot{grid-template-columns:1fr;gap:56px}
     .foot-logo img{width:min(300px,80%)}
@@ -382,6 +403,7 @@
     header .btn{width:auto;padding:11px 14px;font-size:9px;letter-spacing:.1em;white-space:nowrap}
     .brand img{height:26px}
     .form-card{padding:36px 24px}
+    .conf-grid,.lazer-items{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr;grid-auto-rows:240px}
     .gal .wide,.gal .tall{grid-column:auto;grid-row:auto}
     .stats-grid{grid-template-columns:1fr}
@@ -521,20 +543,46 @@
   </div>
 </section>
 
-<!-- ============ AMBIENTES ============ -->
+<!-- ============ CONFORTO NOS DETALHES ============ -->
 <section>
   <div class="wrap">
-    <div class="amb-grid">
-      <div class="amb-photo reveal">
-        <img src="images/fachada-lobby.jpg" alt="Acesso do Lina Praça do Sol" loading="lazy">
+    <div class="reveal">
+      <div class="sec-head"><span class="sec-num">03</span></div>
+      <!-- COPY -->
+      <h2>Conforto nos <em>detalhes</em></h2>
+      <p class="lead" style="margin-top:24px">Integração, privacidade e soluções que aparecem no uso diário.</p>
+    </div>
+    <div class="conf-grid">
+      <!-- COPY: itens -->
+      <div class="conf-card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg>
+        <h3>Área social integrada</h3>
+        <p>Cozinha, sala de estar e varanda gourmet conectadas.</p>
       </div>
-      <div class="amb-copy reveal">
-        <div class="sec-head"><span class="sec-num">03</span></div>
-        <!-- COPY -->
-        <h2>Ambientes pensados para funcionar bem <em>todos os dias</em></h2>
-        <p>Cozinha, sala de estar e varanda gourmet formam uma área social integrada, ampliando o espaço para a rotina e para receber. O acesso social aos apartamentos é feito por <strong>elevador privativo</strong>, com hall exclusivo para cada unidade.</p>
-        <p>Nos quartos, persianas integradas e soluções de atenuação acústica e lumínica ajudam no controle de luz e ruído. <strong>Todos os banheiros contam com ventilação natural</strong>, e a suíte do casal tem closet.</p>
-        <p>A arquitetura do Lina traz <strong>referências modernistas</strong>, presentes nas linhas do empreendimento e na organização dos espaços.</p>
+      <div class="conf-card reveal" style="transition-delay:.06s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16"/><path d="M2 21h20"/><circle cx="14.5" cy="12" r=".5"/></svg>
+        <h3>Acesso privativo</h3>
+        <p>Elevador social e hall exclusivo para cada unidade.</p>
+      </div>
+      <div class="conf-card reveal" style="transition-delay:.12s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <h3>Dormitórios mais confortáveis</h3>
+        <p>Persianas integradas e atenuação acústica e lumínica.</p>
+      </div>
+      <div class="conf-card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+        <h3>Ventilação natural</h3>
+        <p>Presente em todos os banheiros.</p>
+      </div>
+      <div class="conf-card reveal" style="transition-delay:.06s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18"/><path d="M9.5 11v2"/><path d="M14.5 11v2"/></svg>
+        <h3>Suíte do casal com closet</h3>
+        <p>Mais espaço para organização e privacidade.</p>
+      </div>
+      <div class="conf-card reveal" style="transition-delay:.12s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="m5 21 5.5-9.5"/><path d="m19 21-5.5-9.5"/><path d="M12 7v2"/></svg>
+        <h3>Arquitetura com referências modernistas</h3>
+        <p>Linhas e soluções que dão identidade ao projeto e aparecem também na organização dos ambientes.</p>
       </div>
     </div>
   </div>
@@ -547,10 +595,39 @@
       <div class="reveal">
         <div class="sec-head"><span class="sec-num">04</span></div>
         <!-- COPY -->
-        <h2>Lazer para diferentes momentos da <em>rotina</em></h2>
+        <h2>Lazer com diferentes possibilidades de <em>uso</em></h2>
       </div>
       <!-- COPY -->
-      <p class="lead reveal">As áreas comuns combinam espaços para atividade física, descanso, convivência e momentos em família. Entre os diferenciais estão a <strong>academia com vista para a Praça do Sol</strong>, piscina adulta com raia e piscina infantil, sauna, massagem, SPA, brinquedoteca integrada ao playground, salão de festas, churrasqueira e deck com área coberta.</p>
+      <p class="lead reveal">Espaços para atividade física, descanso, crianças e momentos de recreação.</p>
+    </div>
+
+    <div class="lazer-items">
+      <!-- COPY: itens -->
+      <div class="lz-item reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+        <h3>Fitness e bem-estar</h3>
+        <p>Academia com vista para a Praça do Sol, sauna, massagem e SPA.</p>
+      </div>
+      <div class="lz-item reveal" style="transition-delay:.06s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+        <h3>Piscinas</h3>
+        <p>Piscina adulta com raia e piscina infantil.</p>
+      </div>
+      <div class="lz-item reveal" style="transition-delay:.12s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="14" y="3" width="7" height="7" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg>
+        <h3>Para as crianças</h3>
+        <p>Brinquedoteca integrada ao playground.</p>
+      </div>
+      <div class="lz-item reveal" style="transition-delay:.18s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg>
+        <h3>Para receber</h3>
+        <p>Salão de festas, churrasqueira e deck com área coberta.</p>
+      </div>
+      <div class="lz-item reveal" style="transition-delay:.24s">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+        <h3>Design nas áreas comuns</h3>
+        <p>Mobiliário com peças assinadas por designers brasileiros.</p>
+      </div>
     </div>
 
     <div class="gal">
@@ -564,11 +641,9 @@
       <figure class="wide reveal"><img src="images/playground.jpg" alt="Playground" loading="lazy"><figcaption>Playground</figcaption></figure>
     </div>
 
-    <div class="lazer-note">
-      <!-- COPY -->
-      <p class="reveal">O mobiliário das áreas comuns também inclui <strong>peças assinadas por designers brasileiros</strong>, levando o cuidado com arquitetura e design para além dos apartamentos.</p>
+    <div class="lazer-cta reveal">
       <!-- COPY: CTA -->
-      <a class="btn reveal" href="#contato">Falar com o time comercial <span class="arr">→</span></a>
+      <a class="btn" href="#contato">Falar com o time comercial <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -579,9 +654,10 @@
     <div class="reveal">
       <div class="sec-head"><span class="sec-num">05</span></div>
       <!-- COPY -->
-      <h2>O Lina Praça do Sol já está <em style="color:var(--primary)">pronto para morar</em></h2>
-      <p>Aqui, você não precisa decidir apenas com base em planta, perspectiva ou previsão de entrega. O empreendimento está concluído. Você pode visitar os espaços, entender as proporções dos ambientes, conhecer as áreas comuns e avaliar pessoalmente o imóvel antes da compra.</p>
-      <p>Para quem já procura um apartamento de 3 quartos no Setor Oeste, é a oportunidade de conhecer de perto o endereço, a planta e os detalhes que farão parte da rotina.</p>
+      <h2>Pronto para <em style="color:var(--primary)">morar</em></h2>
+      <p class="pronto-sub">Conheça o empreendimento concluído antes de decidir.</p>
+      <p>O Lina já está pronto. Você pode visitar os apartamentos, conhecer as áreas comuns e avaliar pessoalmente os espaços, as proporções e o endereço.</p>
+      <p>Para quem procura um apartamento de 3 quartos no Setor Oeste, é a oportunidade de tomar a decisão com o imóvel já entregue.</p>
       <!-- COPY: CTA -->
       <a class="btn" href="#contato">Quero conhecer o Lina <span class="arr">→</span></a>
     </div>
